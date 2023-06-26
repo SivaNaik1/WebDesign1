@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0px;
+        padding: 0px;
+      }
+      body{
+        width: 100%;
+        height: 100vh;
+        background-image: url(./bg.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+       
+       
+      }
+      /* #main{
+        width: 1330px;
+        height: 700px;
+        
+     
+      } */
+      #img1{
+        width: 100%;
+        height: 1000px;
+        background-image: url(./jack.webp);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+        bottom:0px;
+        
+      }
+      #txt{
+        position: relative;
+        left: 33%;
+        bottom:500px;
+        font-size: 80px;
+        color: white;
+      }
+      #main2{
+        width: 100%;
+        height: 790px;
+        position: relative;
+        bottom: 100px;
+        /* background-image: linear-gradient(rgba(255, 166, 0, 0.658),rgba(255, 217, 0, 0.548)); */
+      }
+      #input{
+        position: absolute;
+        top: 550px;
+        left: 500px;
+        border-radius:10px ;
+        border: none;
+        background-color: transparent;
+        transform: rotate(10deg);
+
+      }
+     
+      fieldset{
+        width: 800px;
+        height: 280px;
+        border-radius: 10px;
+        position: relative;
+        left: 320px;
+        top: 80px;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        border: none;
+        font-size: 97px;
+        color: gold;
+        text-shadow: 3px 3px 5px black;
+        background-image: url(./box.webp);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+       
+      }
+      #result1
+      {
+        margin-top: 20px;
+       width: 150px;
+       height: 150px;
+       position: relative;
+       left: 35px;
+       top: 40px;
+       display: flex;
+       justify-content: center;
+       align-content: center;
+       text-align: center;
+       border-radius: 20px;
+      }
+      #result2
+      {
+        margin-top: 20px;
+       width: 150px;
+       height: 150px;
+       position: relative;
+       left: 35px;
+       top: 40px;
+       display: flex;
+       justify-content: center;
+       align-content: center;
+       text-align: center;
+       border-radius: 20px;
+      }
+      #result3
+      {
+        margin-top: 20px;
+       width: 150px;
+       height: 150px;
+       position: relative;
+       left: 10px;
+       top: 40px;
+       display: flex;
+       justify-content: center;
+       align-content: center;
+       text-align: center;
+       border-radius: 20px;
+      }
+      #result4
+      {
+        margin-top: 20px;
+       width: 150px;
+       height: 150px;
+       position: relative;
+       left: -20px;
+       top: 40px;
+       display: flex;
+       justify-content: center;
+       align-content: center;
+       text-align: center;
+       border-radius: 20px;
+      }
+     h1{
+         display: flex;
+         align-items: center;
+     }
+
+    </style>
+</head>
+<body>
+    
+    <div id="main2">
+        <fieldset>
+    <h1 id="result1" >$</h1>
+    <h1 id="result2" >$</h1>
+    <h1 id="result3" >$</h1>
+    <h1 id="result4" >$</h1>
+</fieldset>
+    <!-- <input id="input" type="button" value="Jackpot" onclick="jackpot()"> -->
+    <button><img id="input" src="./but.jpg" onclick="jackpot()"></button>
+</div>
+<div id="main" style="display: none;" >
+  <img id="img1" >
+  <!-- <h1 id="txt">Congratuation</h1> -->
+</div>
+    <script>
+        function jackpot()
+        {
+      var num1=Math.floor(Math.random()*5)
+      var num2=Math.floor(Math.random()*5)
+      var num3=Math.floor(Math.random()*5)
+      var num4=Math.floor(Math.random()*5)
+      document.getElementById("result1").innerHTML=num1;
+      document.getElementById("result2").innerHTML=num2;
+      document.getElementById("result3").innerHTML=num3;
+      document.getElementById("result4").innerHTML=num4;
+      if(num1==num2&&num2==num3&&num3==num4)
+      {
+        document.getElementById("main").style.display="block";
+        document.getElementById("main").style.position="relative";
+
+        
+      }
+        }
+    </script>
+    
+</body>
+</html>
